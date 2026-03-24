@@ -13,7 +13,8 @@ class Solution:
         
         # 当快指针 fast 未越界，且快指针的下一个节点也未越界时，继续循环
         # 这是为了防止 fast.next.next 发生空指针异常
-        while fast and fast.next:
+        while fast and fast.next is not None:
+        #   while fast and fast.next 也可以
             # 慢指针 slow 每次向后移动一步（乌龟走一步）
             slow = slow.next  
             
